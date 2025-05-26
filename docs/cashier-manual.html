@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>收银系统使用说明书 - 汇金Pro</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- 自定义CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/docs.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/images/logo-placeholder.png" alt="汇金Pro Logo" width="40" height="40">
+                <span class="ms-2 d-none d-sm-inline">汇金Pro</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="productDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            产品
+                        </a>
+                        <ul class="dropdown-menu shadow-sm" aria-labelledby="productDropdown">
+                            <li><a class="dropdown-item" href="#">掌柜系统</a></li>
+                            <li><a class="dropdown-item" href="#">收银系统</a></li>
+                            <li><a class="dropdown-item" href="#">财务报表系统</a></li>
+                            <li><a class="dropdown-item" href="#">移动点单系统（开发中）</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">客用小程序（开发中）</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#downloadModal">下载</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../docs.html">文档中心</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="supportDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            支持
+                        </a>
+                        <ul class="dropdown-menu shadow-sm" aria-labelledby="supportDropdown">
+                            <li><a class="dropdown-item" href="#">常见问题</a></li>
+                            <li><a class="dropdown-item" href="#">安装指南</a></li>
+                            <li><a class="dropdown-item" href="#">在线客服</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">联系我们</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="#" class="btn btn-outline-primary d-none d-lg-block">联系我们</a>
+                    <a href="#" class="btn btn-primary d-lg-none w-100">联系我们</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 文档内容 -->
+    <div class="docs-container pt-5 mt-5">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- 侧边栏导航 -->
+                <div class="col-lg-3 col-md-4 docs-sidebar">
+                    <div class="sticky-top pt-3">
+                        <div class="docs-search mb-4">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-search"></i></span>
+                                <input type="text" class="form-control" placeholder="搜索文档...">
+                            </div>
+                        </div>
+                        
+                        <h5 class="sidebar-heading">收银系统使用说明书</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#intro">
+                                    <i class="fas fa-flag me-2"></i>基本介绍
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#room-management">
+                                    <i class="fas fa-door-open me-2"></i>包厢管理
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#order-management">
+                                    <i class="fas fa-shopping-cart me-2"></i>商品点单
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#checkout">
+                                    <i class="fas fa-money-bill-wave me-2"></i>结账操作
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#order-view">
+                                    <i class="fas fa-clipboard-list me-2"></i>订单管理
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#wine-storage">
+                                    <i class="fas fa-wine-bottle me-2"></i>存酒管理
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#shift-handover">
+                                    <i class="fas fa-exchange-alt me-2"></i>交班管理
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#member-management">
+                                    <i class="fas fa-users me-2"></i>会员管理
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <h5 class="sidebar-heading mt-4">其他文档</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../manager-manual.html">
+                                    <i class="fas fa-store me-2"></i>掌柜系统说明书
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../mobile-manual.html">
+                                    <i class="fas fa-mobile-alt me-2"></i>移动点单系统说明书
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../docs.html#finance-manual">
+                                    <i class="fas fa-chart-line me-2"></i>财务报表系统说明书
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 文档内容区域 -->
+                <div class="col-lg-9 col-md-8 docs-content">
+                    <div class="p-4">
+                        <div class="docs-header mb-4">
+                            <h1>汇金Pro收银系统使用说明书</h1>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="../index.html">首页</a></li>
+                                    <li class="breadcrumb-item"><a href="../docs.html">文档中心</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">收银系统使用说明书</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        
+                        <!-- 前言 -->
+                        <div class="alert alert-primary">
+                            <h4 class="alert-heading">前言</h4>
+                            <p>本说明书针对【汇金Pro 收银系统】的日常操作，主要面向收银员和前台服务人员。系统包含包厢管理、商品点单、订单处理、结账收款、存酒管理和交班管理六大核心模块，本说明书将详细介绍各模块的基本操作流程。</p>
+                        </div>
+                        
+                        <!-- 基本介绍部分 -->
+                        <section id="intro" class="mb-5">
+                            <h2>基本介绍</h2>
+                            
+                            <h3>系统登录</h3>
+                            <ol>
+                                <li>打开系统登录界面</li>
+                                <li>输入用户名和密码或扫描二维码</li>
+                                <li>点击"登录"按钮</li>
+                                <li>系统验证身份后进入主界面</li>
+                                <li>不同级别账号拥有不同操作权限，部分功能可能需要更高权限账号才能执行</li>
+                            </ol>
+                            
+                            <div class="docs-tip docs-tip-info my-4">
+                                <h5><i class="fas fa-info-circle me-2"></i>小贴士</h5>
+                                <p>首次登录系统时，建议修改默认密码以确保账户安全。密码应包含字母、数字和特殊字符，长度不少于8位。</p>
+                            </div>
+                            
+                            <h3>实时包厢页面</h3>
+                            <p>实时包厢页是系统的主页面，显示所有包厢的实时状态和快捷操作按钮。</p>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h5 class="mb-0">包厢状态颜色说明</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li><span class="badge bg-light text-dark me-2">白色</span>空闲包厢，可以开台</li>
+                                        <li><span class="badge bg-primary me-2">蓝色</span>使用中包厢</li>
+                                        <li><span class="badge bg-warning me-2">黄色</span>使用超时未结账的包厢</li>
+                                        <li><span class="badge bg-secondary me-2">灰色</span>故障状态，暂不可用</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h5 class="mb-0">包厢状态标识</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>预订标识：包厢右上角显示"订"字，表示该包厢已被预订</li>
+                                        <li>带客标识：包厢右上角显示"带"字，表示该包厢正在带客试用</li>
+                                        <li>清洁标识：包厢右上角显示"扫"字，表示该包厢正在清洁中</li>
+                                        <li>锁房标识：包厢右上角显示锁的图标，表示该包厢已被锁房，不能再点单</li>
+                                        <li>联台标识：包厢右上角显示链接图标，表示该包厢与其他包厢联台</li>
+                                        <li>生日标识：包厢右上角显示蛋糕图标，表示该包厢客人过生日</li>
+                                        <li>呼叫标识：包厢右上角显示铃铛图标，表示该包厢正在呼叫服务员，有服务需求</li>
+                                        <li>时间标识：包厢右下方显示时钟图标，表示使用中的包厢剩余的时间</li>
+                                        <li>支付标识：包厢右下方显示支付状态，包括未结账/已结账/挂账</li>
+                                        <li>低消标识：包厢右下方显示低消未满警示</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- 包厢详情面板 -->
+                            <h4>包厢详情面板</h4>
+                            <ol>
+                                <li>点击任意包厢卡片，右侧会显示该包厢的详细信息</li>
+                                <li>详情面板显示：
+                                    <ul>
+                                        <li>包厢基本信息（包厢类型、所在区域）</li>
+                                        <li>预订/开台时间信息（预订时间、预计结束时间）</li>
+                                        <li>费用明细（包厢费用、商品消费、最低消费等）</li>
+                                        <li>客人信息（姓名、电话、备注等）</li>
+                                    </ul>
+                                </li>
+                                <li>根据包厢状态，面板底部显示不同的可用操作按钮</li>
+                            </ol>
+
+                            <!-- 辅助功能 -->
+                            <h4>辅助功能</h4>
+                            <ol>
+                                <li>使用搜索框，可直接搜索包厢号或客人信息</li>
+                                <li>使用排序功能，可按区域、类型、名称、消费、状态等排序包厢</li>
+                                <li>使用筛选条件，可按区域、类型或状态等筛选包厢</li>
+                                <li>使用网格与列表切换，可以切换实时包厢页的布局格式</li>
+                            </ol>
+                        </section>
+                        
+                        <!-- 包厢管理部分 -->
+                        <section id="room-management" class="mb-5">
+                            <h2>1. 包厢管理</h2>
+                            
+                            <h3 id="room-open">1.1 开台</h3>
+                            <p>开台是将空闲包厢分配给客人使用的操作。</p>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h5 class="mb-0">操作步骤</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ol>
+                                        <li>在实时包厢页选择一个空闲包厢（白色）</li>
+                                        <li>点击"开台"按钮，进入开台页面</li>
+                                        <li>选择计费类型（买钟/买断/核销）</li>
+                                        <li>选择具体计费方案</li>
+                                        <li>设置开台信息：
+                                            <ul>
+                                                <li>客人信息（选填）</li>
+                                                <li>开始时间（默认当前时间）</li>
+                                                <li>使用时长（根据计费方案自动填充）</li>
+                                            </ul>
+                                        </li>
+                                        <li>选择结账方式：
+                                            <ul>
+                                                <li>开台后结：先开台，稍后结账</li>
+                                                <li>开台立结：立即支付费用</li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h5 class="mb-0">可选操作</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li><strong>会员登录</strong>：点击"会员登录"按钮，输入会员卡号或手机号，系统自动应用会员价格和折扣</li>
+                                        <li><strong>添加商品</strong>：点击"添加商品"按钮，选择商品加入开台单</li>
+                                        <li><strong>商品打折</strong>：点击"商品打折"按钮，对开台配送的商品进行折扣设置</li>
+                                        <li><strong>自定义低消</strong>：点击"自定义低消"按钮，为未设置最低消费的包厢设置最低消费金额（需授权）</li>
+                                        <li><strong>计费方式调整</strong>：调整包厢的计费类型，实现价格调整，类似升舱/降舱功能（需授权）</li>
+                                        <li><strong>预付款</strong>：点击"预付款"按钮，客人预先支付一定金额</li>
+                                        <li><strong>备注</strong>：点击"备注"按钮，添加开台备注信息，可针对整单或具体商品进行备注</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h3 id="booking">1.2 预订</h3>
+                            <p>预订用于提前为客人保留包厢。</p>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h5 class="mb-0">操作步骤</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ol>
+                                        <li>在实时包厢页，选择一个包厢（通常为空闲包厢）</li>
+                                        <li>点击"预订"按钮，弹出预订窗口</li>
+                                        <li>填写预订信息：
+                                            <ul>
+                                                <li>必填：选择包厢、客人姓名/电话/会员卡号、预抵时间</li>
+                                                <li>选填：开台方案、客人来源、备注</li>
+                                            </ul>
+                                        </li>
+                                        <li>点击"确认"按钮完成预订</li>
+                                        <li>预订成功后，该包厢右上角显示"订"字标识</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <h3 id="booking-open">1.3 预订开台</h3>
+                            <p>预订开台用于客人到店后，将已预订的包厢正式开台。</p>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h5 class="mb-0">操作步骤</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ol>
+                                        <li>在实时包厢页选择一个带有"订"字标识的预订包厢</li>
+                                        <li>点击"预订开台"按钮，进入开台页面</li>
+                                        <li>系统自动填充预订信息（客人姓名、电话、预选计费方案等）</li>
+                                        <li>确认或修改开台信息</li>
+                                        <li>选择开台方式（开台后结/开台立结）</li>
+                                        <li>点击确认完成开台</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            
+                            <!-- 后续包厢管理功能省略，可继续添加 -->
+                        </section>
+                        
+                        <!-- 后续部分可继续添加 -->
+                        <section id="order-management" class="mb-5">
+                            <h2>2. 商品点单</h2>
+                            <p>此部分内容将详细介绍如何在系统中进行商品点单操作，包括包厢点单、超市点单、存单取单等功能。</p>
+                            <div class="alert alert-warning">
+                                <i class="fas fa-exclamation-triangle me-2"></i>文档建设中，即将完善...
+                            </div>
+                        </section>
+                        
+                        <section id="checkout" class="mb-5">
+                            <h2>3. 结账操作</h2>
+                            <p>此部分内容将详细介绍如何在系统中进行结账操作，包括结账流程、会员优惠、商家调整等内容。</p>
+                            <div class="alert alert-warning">
+                                <i class="fas fa-exclamation-triangle me-2"></i>文档建设中，即将完善...
+                            </div>
+                        </section>
+                        
+                        <section id="order-view" class="mb-5">
+                            <h2>4. 订单管理</h2>
+                            <p>此部分内容将详细介绍如何在系统中进行订单管理，包括查看订单、查看消费明细、退单等功能。</p>
+                            <div class="alert alert-warning">
+                                <i class="fas fa-exclamation-triangle me-2"></i>文档建设中，即将完善...
+                            </div>
+                        </section>
+                        
+                        <section id="wine-storage" class="mb-5">
+                            <h2>5. 存酒管理</h2>
+                            <p>此部分内容将详细介绍如何在系统中进行存酒管理，包括存酒、取酒、续存、报废等功能。</p>
+                            <div class="alert alert-warning">
+                                <i class="fas fa-exclamation-triangle me-2"></i>文档建设中，即将完善...
+                            </div>
+                        </section>
+                        
+                        <section id="shift-handover" class="mb-5">
+                            <h2>6. 交班管理</h2>
+                            <p>此部分内容将详细介绍如何在系统中进行交班管理，包括查看当前班次、交班操作、查看交班记录等功能。</p>
+                            <div class="alert alert-warning">
+                                <i class="fas fa-exclamation-triangle me-2"></i>文档建设中，即将完善...
+                            </div>
+                        </section>
+                        
+                        <section id="member-management" class="mb-5">
+                            <h2>7. 会员管理</h2>
+                            <p>此部分内容将详细介绍如何在系统中进行会员管理，包括会员卡管理、积分管理、次卡管理等功能。</p>
+                            <div class="alert alert-warning">
+                                <i class="fas fa-exclamation-triangle me-2"></i>文档建设中，即将完善...
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <img src="../assets/images/logo-placeholder.png" alt="汇金Pro Logo" width="40" height="40" class="mb-3">
+                    <h5 class="mb-3">汇金Pro</h5>
+                    <p class="mb-3">KTV经营管理一站式平台</p>
+                    <p class="mb-3">&copy; 2024 汇金Pro. 版权所有</p>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="mb-3">快速链接</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="../index.html" class="text-white-50">首页</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">产品介绍</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">下载中心</a></li>
+                        <li class="mb-2"><a href="../docs.html" class="text-white-50">文档中心</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="mb-3">支持</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50">常见问题</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">安装指南</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">培训视频</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="mb-3">联系方式</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-phone-alt me-2"></i> 400-xxx-xxxx</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> support@huijinpro.com</li>
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 广州市XX区XX路XX号</li>
+                    </ul>
+                    <div class="mt-3">
+                        <a href="#" class="text-white me-3"><i class="fab fa-weixin fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-qq fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-weibo fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 下载模态框 -->
+    <div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="downloadModalLabel">下载汇金Pro系统</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-desktop me-2"></i>收银系统</h5>
+                                    <p class="card-text mb-4">适用于前台收银电脑，支持开台、点单、结账等核心功能</p>
+                                    <div class="d-grid">
+                                        <button class="btn btn-primary mb-2" id="modalWindowsDownload">
+                                            Windows版本 v2.1.5
+                                            <small class="d-block">适用于Windows 10及以上版本</small>
+                                        </button>
+                                        <button class="btn btn-outline-primary" id="modalAndroidDownload">
+                                            安卓收银机版 v2.1.5
+                                            <small class="d-block">适用于收银一体机</small>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-tablet-alt me-2"></i>移动点单系统</h5>
+                                    <p class="card-text mb-4">适用于平板电脑，支持服务员现场接单和厨房管理</p>
+                                    <div class="d-grid">
+                                        <button class="btn btn-primary" id="modalMobileDownload">
+                                            安卓平板版 v2.1.5
+                                            <small class="d-block">适用于Android平板</small>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-progress-container mt-4 d-none">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                        </div>
+                        <div class="text-center mt-2">
+                            <small class="download-status">准备下载...</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                    <a href="#" class="btn btn-outline-primary">查看更多下载</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS 和 Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 自定义JS -->
+    <script src="../js/main.js"></script>
+    <script>
+        // 确保在文档页面也能正常使用下载功能
+        document.addEventListener('DOMContentLoaded', function() {
+            // 检查下载按钮是否存在于当前页面
+            const downloadButtons = [
+                document.getElementById('modalWindowsDownload'),
+                document.getElementById('modalAndroidDownload'),
+                document.getElementById('modalMobileDownload')
+            ];
+            
+            // 为存在的按钮添加事件监听器
+            downloadButtons.forEach(button => {
+                if (button) {
+                    button.addEventListener('click', function() {
+                        let fileName = '';
+                        if (button.id === 'modalWindowsDownload') {
+                            fileName = '收银系统v2.1.5.exe';
+                        } else if (button.id === 'modalAndroidDownload') {
+                            fileName = '收银系统v2.1.5.apk';
+                        } else if (button.id === 'modalMobileDownload') {
+                            fileName = '移动点单系统v2.1.5.apk';
+                        }
+                        
+                        if (window.simulateDownload) {
+                            window.simulateDownload(fileName);
+                        } else {
+                            console.warn('模拟下载函数不存在，可能main.js尚未加载');
+                            // 基本的下载模拟
+                            const progressContainer = document.querySelector('.download-progress-container');
+                            const progressBar = document.querySelector('.progress-bar');
+                            const downloadStatus = document.querySelector('.download-status');
+                            
+                            if (progressContainer && progressBar && downloadStatus) {
+                                progressContainer.classList.remove('d-none');
+                                downloadStatus.textContent = `正在下载 ${fileName}...`;
+                                
+                                let progress = 0;
+                                const interval = setInterval(() => {
+                                    progress += 5;
+                                    progressBar.style.width = `${progress}%`;
+                                    progressBar.setAttribute('aria-valuenow', progress);
+                                    
+                                    if (progress >= 100) {
+                                        clearInterval(interval);
+                                        downloadStatus.textContent = `${fileName} 下载完成！`;
+                                        setTimeout(() => {
+                                            progressContainer.classList.add('d-none');
+                                            progressBar.style.width = '0%';
+                                            progressBar.setAttribute('aria-valuenow', 0);
+                                        }, 2000);
+                                    }
+                                }, 200);
+                            }
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文档中心 - 汇金Pro</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- 自定义CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/docs.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo-placeholder.png" alt="汇金Pro Logo" width="40" height="40">
+                <span class="ms-2 d-none d-sm-inline">汇金Pro</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"  aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="productDropdown" role="button" data-bs-toggle="dropdown" >
+                            产品
+                        </a>
+                        <ul class="dropdown-menu shadow-sm" aria-labelledby="productDropdown">
+                            <li><a class="dropdown-item" href="#">掌柜系统</a></li>
+                            <li><a class="dropdown-item" href="#">收银系统</a></li>
+                            <li><a class="dropdown-item" href="#">财务报表系统</a></li>
+                            <li><a class="dropdown-item" href="#">移动点单系统（开发中）</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">客用小程序（开发中）</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#downloadModal">下载</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="docs.html">文档中心</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#faq-section">常见问题</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="#" class="btn btn-outline-primary d-none d-lg-block">联系我们</a>
+                    <a href="#" class="btn btn-primary d-lg-none w-100">联系我们</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 文档中心内容 -->
+    <div class="docs-container pt-5 mt-5">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- 侧边栏导航 -->
+                <div class="col-lg-3 col-md-4 docs-sidebar">
+                    <div class="sticky-top pt-3">
+                        <div class="docs-search mb-4">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-search"></i></span>
+                                <input type="text" class="form-control" placeholder="搜索文档...">
+                            </div>
+                        </div>
+                        
+                        <h5 class="sidebar-heading">入门指南</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#usage-preparation">
+                                    <i class="fas fa-cog me-2"></i>使用准备
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#feature-overview">
+                                    <i class="fas fa-project-diagram me-2"></i>功能概览
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <h5 class="sidebar-heading mt-4">用户手册</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="docs/manager-manual.html">
+                                    <i class="fas fa-store me-2"></i>掌柜系统使用说明书
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="docs/cashier-manual.html">
+                                    <i class="fas fa-cash-register me-2"></i>收银系统使用说明书
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="docs/mobile-manual.html">
+                                    <i class="fas fa-mobile-alt me-2"></i>移动点单系统说明书
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#finance-manual">
+                                    <i class="fas fa-chart-line me-2"></i>财务报表系统说明书
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <h5 class="sidebar-heading mt-4">KTV字典</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#ktv-terms">
+                                    <i class="fas fa-book me-2"></i>术语解释
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <h5 class="sidebar-heading mt-4">开发者资源</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#api-docs">
+                                    <i class="fas fa-code me-2"></i>API文档
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#integration">
+                                    <i class="fas fa-plug me-2"></i>系统集成指南
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 文档内容区域 -->
+                <div class="col-lg-9 col-md-8 docs-content">
+                    <div class="p-4">
+                        <div class="docs-header mb-4">
+                            <h1>汇金Pro文档中心</h1>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">首页</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">文档中心</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        
+                        <!-- 使用准备部分 -->
+                        <section id="usage-preparation" class="mb-5">
+                            <h2>
+                                使用准备
+                            </h2>
+                            <div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">系统环境要求和配置说明</h5>
+                                        <p class="card-text">
+                                            在开始使用汇金Pro系统前，请确保您的设备满足以下基本要求，并按照配置指南进行设置，以确保系统正常运行。
+                                        </p>
+                                        
+                                        <div class="accordion" id="accordionRequirements">
+                                            <!-- 收银系统 -->
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="heading-cashier-sys">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-cashier-sys"  aria-controls="collapse-cashier-sys">
+                                                        收银系统环境要求
+                                                    </button>
+                                                </h2>
+                                                <div id="collapse-cashier-sys" class="accordion-collapse" aria-labelledby="heading-cashier-sys" data-bs-parent="#accordionRequirements">
+                                                    <div class="accordion-body">
+                                                        <ul class="mb-0">
+                                                            <li>操作系统：Windows 10及以上版本</li>
+                                                            <li>处理器：Intel Core i3或同等性能处理器</li>
+                                                            <li>内存：4GB RAM (推荐8GB)</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- 移动点单系统 -->
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="heading-mobile-sys">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-mobile-sys"  aria-controls="collapse-mobile-sys">
+                                                        移动点单系统要求
+                                                    </button>
+                                                </h2>
+                                                <div id="collapse-mobile-sys" class="accordion-collapse" aria-labelledby="heading-mobile-sys" data-bs-parent="#accordionRequirements">
+                                                    <div class="accordion-body">
+                                                        <ul class="mb-0">
+                                                            <li>操作系统：Android 8.0或以上</li>
+                                                            <li>设备：Android平板或大屏手机</li>
+                                                            <li>屏幕：8寸以上屏幕</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- 掌柜系统和财务报表系统 -->
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="heading-manager-sys">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-manager-sys"  aria-controls="collapse-manager-sys">
+                                                        掌柜系统和财务报表系统
+                                                    </button>
+                                                </h2>
+                                                <div id="collapse-manager-sys" class="accordion-collapse" aria-labelledby="heading-manager-sys" data-bs-parent="#accordionRequirements">
+                                                    <div class="accordion-body">
+                                                        <ul class="mb-0">
+                                                            <li>推荐浏览器：谷歌内核Chrome</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- 功能概览部分 -->
+                        <section id="feature-overview" class="mb-5">
+                            <h2>
+                                功能概览
+                            </h2>
+                            <div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">汇金Pro系统功能模块概述</h5>
+                                        <p class="card-text">
+                                            汇金Pro系统由四大核心模块组成，每个模块承担不同的业务功能，共同构成完整的KTV经营管理解决方案。
+                                        </p>
+                                        
+                                        <div class="row mt-4">
+                                            <div class="col-md-6 mb-4">
+                                                <div class="card h-100">
+                                                    <div class="card-body">
+                                                        <h5><i class="fas fa-store text-primary me-2"></i>掌柜系统</h5>
+                                                        <p>店长/老板移动管理平台</p>
+                                                        <ul>
+                                                            <li>实时监控 - 营业数据大盘，包厢实时状态</li>
+                                                            <li>门店管理 - 门店配置和收银机绑定</li>
+                                                            <li>包厢管理 - 包厢类型配置，价格设置</li>
+                                                            <li>商品管理 - 商品类型配置，价格调整</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-4">
+                                                <div class="card h-100">
+                                                    <div class="card-body">
+                                                        <h5><i class="fas fa-cash-register text-primary me-2"></i>收银系统</h5>
+                                                        <p>KTV前台核心业务系统</p>
+                                                        <ul>
+                                                            <li>包厢管理 - 开台、预订、续房、换房等</li>
+                                                            <li>商品点单 - 酒水、小吃、果盘等商品销售</li>
+                                                            <li>结账收款 - 多种支付方式，优惠管理</li>
+                                                            <li>存酒管理 - 客人酒水寄存与取用</li>
+                                                            <li>交班管理 - 班次结算与交接</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-4">
+                                                <div class="card h-100">
+                                                    <div class="card-body">
+                                                        <h5><i class="fas fa-mobile-alt text-primary me-2"></i>移动点单系统</h5>
+                                                        <p>服务员现场接单工具</p>
+                                                        <ul>
+                                                            <li>包厢点单 - 现场快速下单，减少等待</li>
+                                                            <li>订单跟踪 - 实时查看订单状态</li>
+                                                            <li>催单管理 - 处理客人催单请求</li>
+                                                            <li>呼叫服务 - 接收处理客人呼叫</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-4">
+                                                <div class="card h-100">
+                                                    <div class="card-body">
+                                                        <h5><i class="fas fa-chart-line text-primary me-2"></i>财务报表系统</h5>
+                                                        <p>业务数据分析平台</p>
+                                                        <ul>
+                                                            <li>营收报表 - 日/周/月营业额统计分析</li>
+                                                            <li>商品分析 - 热销品分析，毛利统计</li>
+                                                            <li>会员分析 - 会员消费行为洞察</li>
+                                                            <li>包厢分析 - 包厢使用率与营收贡献</li>
+                                                            <li>趋势预测 - 季节性波动和趋势分析</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- 掌柜系统使用说明书部分 -->
+                        <section id="manager-manual" class="mb-5">
+                            <h2>
+                                掌柜系统使用说明书
+                            </h2>
+                            <div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">汇金Pro掌柜系统使用说明书</h5>
+                                        <p class="card-text">
+                                            本说明书介绍【掌柜系统】的使用方法，面向KTV管理人员和运营人员。系统包含包厢管理、商品管理、员工管理、门店管理四大核心功能模块，本手册将详细说明各模块的操作方法和配置技巧。
+                                        </p>
+                                        <div class="docs-toc mt-3 mb-4">
+                                            <h6>目录</h6>
+                                            <ul>
+                                                <li><a href="docs/manager-manual.html#basic-intro">基本介绍</a></li>
+                                                <li><a href="docs/manager-manual.html#store-list">门店列表</a></li>
+                                                <li><a href="docs/manager-manual.html#account-management">账户管理</a></li>
+                                                <li><a href="docs/manager-manual.html#business-report">营业简报</a></li>
+                                                <li><a href="docs/manager-manual.html#room-management">包厢管理</a></li>
+                                                <li><a href="docs/manager-manual.html#product-management">商品管理</a></li>
+                                                <li><a href="docs/manager-manual.html#employee-management">员工管理</a></li>
+                                                <li><a href="docs/manager-manual.html#store-management">门店管理</a></li>
+                                            </ul>
+                                        </div>
+                                        <a href="docs/manager-manual.html" class="btn btn-primary">阅读完整说明书</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- 收银系统使用说明书部分 -->
+                        <section id="cashier-manual" class="mb-5">
+                            <h2>
+                                收银系统使用说明书
+                            </h2>
+                            <div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">汇金Pro收银系统使用说明书</h5>
+                                        <p class="card-text">
+                                            本说明书针对【汇金Pro 收银系统】的日常操作，主要面向收银员和前台服务人员。系统包含包厢管理、商品点单、订单处理、结账收款、存酒管理和交班管理六大核心模块，本说明书将详细介绍各模块的基本操作流程。
+                                        </p>
+                                        <div class="docs-toc mt-3 mb-4">
+                                            <h6>目录</h6>
+                                            <ul>
+                                                <li><a href="docs/cashier-manual.html#intro">基本介绍</a></li>
+                                                <li><a href="docs/cashier-manual.html#room-management">包厢管理</a></li>
+                                                <li><a href="docs/cashier-manual.html#order-management">商品点单</a></li>
+                                                <li><a href="docs/cashier-manual.html#checkout">结账操作</a></li>
+                                                <li><a href="docs/cashier-manual.html#order-view">订单管理</a></li>
+                                                <li><a href="docs/cashier-manual.html#wine-storage">存酒管理</a></li>
+                                                <li><a href="docs/cashier-manual.html#shift-handover">交班管理</a></li>
+                                            </ul>
+                                        </div>
+                                        <a href="docs/cashier-manual.html" class="btn btn-primary">阅读完整说明书</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- 移动点单系统使用说明书部分 -->
+                        <section id="mobile-manual" class="mb-5">
+                            <h2>
+                                移动点单系统使用说明书
+                            </h2>
+                            <div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">汇金Pro移动点单系统使用说明书</h5>
+                                        <p class="card-text">
+                                            本说明书面向KTV服务员，介绍如何在Pad端使用移动点单系统，实现包厢现场的高效点单与服务操作。系统采用触摸屏操作，界面简洁直观，便于快速上手。
+                                        </p>
+                                        <div class="docs-toc mt-3 mb-4">
+                                            <h6>目录</h6>
+                                            <ul>
+                                                <li><a href="docs/mobile-manual.html#basic-intro">系统简介</a></li>
+                                                <li><a href="docs/mobile-manual.html#login">系统登录</a></li>
+                                                <li><a href="docs/mobile-manual.html#room-selection">选择包厢</a></li>
+                                                <li><a href="docs/mobile-manual.html#product-order">商品点单</a></li>
+                                                <li><a href="docs/mobile-manual.html#cart-management">购物车管理</a></li>
+                                                <li><a href="docs/mobile-manual.html#order-view">查看订单</a></li>
+                                                <li><a href="docs/mobile-manual.html#call-service">呼叫功能</a></li>
+                                            </ul>
+                                        </div>
+                                        <a href="docs/mobile-manual.html" class="btn btn-primary">阅读完整说明书</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- KTV字典部分 -->
+                        <section id="ktv-terms" class="mb-5">
+                            <h2>
+                                KTV字典
+                            </h2>
+                            <div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">汇金Pro系统术语词典</h5>
+                                        <p class="card-text">
+                                            本字典收录了KTV行业常用专业术语及在汇金Pro系统中的具体含义，帮助新用户快速了解行业术语，提高系统使用效率。
+                                        </p>
+                                        
+                                        <!-- 搜索框 -->
+                                        <div class="mb-4">
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="fas fa-search"></i></span>
+                                                <input type="text" class="form-control" id="termSearch" placeholder="搜索术语...">
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- 分类标签页 -->
+                                        <ul class="nav nav-tabs mb-3" id="termsTab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all-terms" type="button" role="tab" aria-controls="all-terms" aria-selected="true">全部术语</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="room-tab" data-bs-toggle="tab" data-bs-target="#room-terms" type="button" role="tab" aria-controls="room-terms" aria-selected="false">包厢管理</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="order-tab" data-bs-toggle="tab" data-bs-target="#order-terms" type="button" role="tab" aria-controls="order-terms" aria-selected="false">订单与结账</button>
+                                            </li>
+                                        </ul>
+                                        
+                                        <!-- 标签内容 -->
+                                        <div class="tab-content" id="termsTabContent">
+                                            <!-- 全部术语 -->
+                                            <div class="tab-pane fade show active" id="all-terms" role="tabpanel" aria-labelledby="all-tab">
+                                                <div class="accordion" id="accordionAllTerms">
+                                                    <!-- 开台 -->
+                                                    <div class="accordion-item term-item">
+                                                        <h2 class="accordion-header" id="heading-opening">
+                                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-opening"  aria-controls="collapse-opening">
+                                                                开台
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapse-opening" class="accordion-collapse" aria-labelledby="heading-opening" data-bs-parent="#accordionAllTerms">
+                                                            <div class="accordion-body">
+                                                                <p><strong>定义：</strong>客人进入包厢并开始计费的操作。</p>
+                                                                <p><strong>应用场景：</strong>收银员为到店客人分配包厢并开始计时计费的过程。开台时需选择计费方式（买钟/买断）、使用时长等信息，生成消费订单。</p>
+                                                                <p><strong>相关术语：</strong>预订开台、带客开台</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <!-- 关台 -->
+                                                    <div class="accordion-item term-item">
+                                                        <h2 class="accordion-header" id="heading-closing">
+                                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-closing"  aria-controls="collapse-closing">
+                                                                关台
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapse-closing" class="accordion-collapse" aria-labelledby="heading-closing" data-bs-parent="#accordionAllTerms">
+                                                            <div class="accordion-body">
+                                                                <p><strong>定义：</strong>结束包厢使用，停止计费的操作。</p>
+                                                                <p><strong>应用场景：</strong>客人使用结束后，收银员结束包厢计时计费，并清空包厢供下一位客人使用。通常在结账完成后自动执行关台操作。</p>
+                                                                <p><strong>相关术语：</strong>结账、退房</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <!-- 带客 -->
+                                                    <div class="accordion-item term-item">
+                                                        <h2 class="accordion-header" id="heading-guest-showing">
+                                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-guest-showing"  aria-controls="collapse-guest-showing">
+                                                                带客
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapse-guest-showing" class="accordion-collapse" aria-labelledby="heading-guest-showing" data-bs-parent="#accordionAllTerms">
+                                                            <div class="accordion-body">
+                                                                <p><strong>定义：</strong>短暂带领客人进入包厢参观的功能。</p>
+                                                                <p><strong>应用场景：</strong>前台接待客人时，临时标记包厢为"带客"状态，带领客人参观包厢环境。系统会暂时锁定该包厢，避免被其他客人预订或开台。</p>
+                                                                <p><strong>相关术语：</strong>空闲包厢、临时锁房</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <!-- 锁房 -->
+                                                    <div class="accordion-item term-item">
+                                                        <h2 class="accordion-header" id="heading-room-lock">
+                                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-room-lock"  aria-controls="collapse-room-lock">
+                                                                锁房
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapse-room-lock" class="accordion-collapse" aria-labelledby="heading-room-lock" data-bs-parent="#accordionAllTerms">
+                                                            <div class="accordion-body">
+                                                                <p><strong>定义：</strong>暂时禁止对某个包厢进行操作（如点单、续房等）的功能。</p>
+                                                                <p><strong>应用场景：</strong>当需要控制客人消费或处理特殊情况时，管理员可对特定包厢进行锁房操作，暂停该包厢的商品点单和续时等功能，直到解除锁定。</p>
+                                                                <p><strong>相关术语：</strong>解锁、临时锁房</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <!-- 买断 -->
+                                                    <div class="accordion-item term-item">
+                                                        <h2 class="accordion-header" id="heading-room-buyout">
+                                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-room-buyout"  aria-controls="collapse-room-buyout">
+                                                                买断
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapse-room-buyout" class="accordion-collapse" aria-labelledby="heading-room-buyout" data-bs-parent="#accordionAllTerms">
+                                                            <div class="accordion-body">
+                                                                <p><strong>定义：</strong>客人以固定价格租用包厢一段时间的消费模式。</p>
+                                                                <p><strong>应用场景：</strong>客人支付固定金额后可在约定时间段内使用包厢，不再另外收取包厢费用。例如：下午场买断5小时500元。</p>
+                                                                <p><strong>相关术语：</strong>买钟、包厢计费</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <!-- 买钟 -->
+                                                    <div class="accordion-item term-item">
+                                                        <h2 class="accordion-header" id="heading-room-hourly">
+                                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-room-hourly"  aria-controls="collapse-room-hourly">
+                                                                买钟
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapse-room-hourly" class="accordion-collapse" aria-labelledby="heading-room-hourly" data-bs-parent="#accordionAllTerms">
+                                                            <div class="accordion-body">
+                                                                <p><strong>定义：</strong>按时间计费的包厢使用模式。</p>
+                                                                <p><strong>应用场景：</strong>根据客人实际使用包厢的时长收费，通常按小时计费。例如：小包厢100元/小时，使用3小时收费300元。</p>
+                                                                <p><strong>相关术语：</strong>买断、包厢计费、续房</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <!-- 预付费 -->
+                                                    <div class="accordion-item term-item">
+                                                        <h2 class="accordion-header" id="heading-prepaid">
+                                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-prepaid"  aria-controls="collapse-prepaid">
+                                                                预付费
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapse-prepaid" class="accordion-collapse" aria-labelledby="heading-prepaid" data-bs-parent="#accordionAllTerms">
+                                                            <div class="accordion-body">
+                                                                <p><strong>定义：</strong>客人在使用包厢前预先支付的费用。</p>
+                                                                <p><strong>应用场景：</strong>开台时客人先支付一定金额作为消费押金，后续消费可抵扣该金额。预付费有助于控制客人消费额度，减少坏账风险。</p>
+                                                                <p><strong>相关术语：</strong>押金、开台立结</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <!-- 账单还原 -->
+                                                    <div class="accordion-item term-item">
+                                                        <h2 class="accordion-header" id="heading-bill-restore">
+                                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-bill-restore"  aria-controls="collapse-bill-restore">
+                                                                账单还原
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapse-bill-restore" class="accordion-collapse" aria-labelledby="heading-bill-restore" data-bs-parent="#accordionAllTerms">
+                                                            <div class="accordion-body">
+                                                                <p><strong>定义：</strong>将已结账的账单恢复到未结状态的操作。</p>
+                                                                <p><strong>应用场景：</strong>当结账操作有误或客人需要继续消费时，管理员可将已结账的订单恢复为未结状态，允许继续添加消费项目。此操作通常需要较高权限。</p>
+                                                                <p><strong>相关术语：</strong>反结账、账单修改</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- 包厢管理术语 -->
+                                            <div class="tab-pane fade" id="room-terms" role="tabpanel" aria-labelledby="room-tab">
+                                                <div class="accordion" id="accordionRoomTerms">
+                                                    <!-- 开台 -->
+                                                    <div class="accordion-item term-item">
+                                                        <h2 class="accordion-header" id="heading-room-opening">
+                                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-room-opening"  aria-controls="collapse-room-opening">
+                                                                开台
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapse-room-opening" class="accordion-collapse" aria-labelledby="heading-room-opening" data-bs-parent="#accordionRoomTerms">
+                                                            <div class="accordion-body">
+                                                                <p><strong>定义：</strong>客人进入包厢并开始计费的操作。</p>
+                                                                <p><strong>应用场景：</strong>收银员为到店客人分配包厢并开始计时计费的过程。开台时需选择计费方式（买钟/买断）、使用时长等信息，生成消费订单。</p>
+                                                                <p><strong>相关术语：</strong>预订开台、带客开台</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <!-- 关台 -->
+                                                    <div class="accordion-item term-item">
+                                                        <h2 class="accordion-header" id="heading-room-closing">
+                                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-room-closing"  aria-controls="collapse-room-closing">
+                                                                关台
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapse-room-closing" class="accordion-collapse" aria-labelledby="heading-room-closing" data-bs-parent="#accordionRoomTerms">
+                                                            <div class="accordion-body">
+                                                                <p><strong>定义：</strong>结束包厢使用，停止计费的操作。</p>
+                                                                <p><strong>应用场景：</strong>客人使用结束后，收银员结束包厢计时计费，并清空包厢供下一位客人使用。通常在结账完成后自动执行关台操作。</p>
+                                                                <p><strong>相关术语：</strong>结账、退房</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <!-- 带客 -->
+                                                    <div class="accordion-item term-item">
+                                                        <h2 class="accordion-header" id="heading-room-guest-showing">
+                                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-room-guest-showing"  aria-controls="collapse-room-guest-showing">
+                                                                带客
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapse-room-guest-showing" class="accordion-collapse" aria-labelledby="heading-room-guest-showing" data-bs-parent="#accordionRoomTerms">
+                                                            <div class="accordion-body">
+                                                                <p><strong>定义：</strong>短暂带领客人进入包厢参观的功能。</p>
+                                                                <p><strong>应用场景：</strong>前台接待客人时，临时标记包厢为"带客"状态，带领客人参观包厢环境。系统会暂时锁定该包厢，避免被其他客人预订或开台。</p>
+                                                                <p><strong>相关术语：</strong>空闲包厢、临时锁房</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <!-- 锁房 -->
+                                                    <div class="accordion-item term-item">
+                                                        <h2 class="accordion-header" id="heading-room-room-lock">
+                                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-room-room-lock"  aria-controls="collapse-room-room-lock">
+                                                                锁房
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapse-room-room-lock" class="accordion-collapse" aria-labelledby="heading-room-room-lock" data-bs-parent="#accordionRoomTerms">
+                                                            <div class="accordion-body">
+                                                                <p><strong>定义：</strong>暂时禁止对某个包厢进行操作（如点单、续房等）的功能。</p>
+                                                                <p><strong>应用场景：</strong>当需要控制客人消费或处理特殊情况时，管理员可对特定包厢进行锁房操作，暂停该包厢的商品点单和续时等功能，直到解除锁定。</p>
+                                                                <p><strong>相关术语：</strong>解锁、临时锁房</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <!-- 买断 -->
+                                                    <div class="accordion-item term-item">
+                                                        <h2 class="accordion-header" id="heading-room-room-buyout">
+                                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-room-room-buyout"  aria-controls="collapse-room-room-buyout">
+                                                                买断
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapse-room-room-buyout" class="accordion-collapse" aria-labelledby="heading-room-room-buyout" data-bs-parent="#accordionRoomTerms">
+                                                            <div class="accordion-body">
+                                                                <p><strong>定义：</strong>客人以固定价格租用包厢一段时间的消费模式。</p>
+                                                                <p><strong>应用场景：</strong>客人支付固定金额后可在约定时间段内使用包厢，不再另外收取包厢费用。例如：下午场买断5小时500元。</p>
+                                                                <p><strong>相关术语：</strong>买钟、包厢计费</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <!-- 买钟 -->
+                                                    <div class="accordion-item term-item">
+                                                        <h2 class="accordion-header" id="heading-room-room-hourly">
+                                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-room-room-hourly"  aria-controls="collapse-room-room-hourly">
+                                                                买钟
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapse-room-room-hourly" class="accordion-collapse" aria-labelledby="heading-room-room-hourly" data-bs-parent="#accordionRoomTerms">
+                                                            <div class="accordion-body">
+                                                                <p><strong>定义：</strong>按时间计费的包厢使用模式。</p>
+                                                                <p><strong>应用场景：</strong>根据客人实际使用包厢的时长收费，通常按小时计费。例如：小包厢100元/小时，使用3小时收费300元。</p>
+                                                                <p><strong>相关术语：</strong>买断、包厢计费、续房</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- 订单与结账术语 -->
+                                            <div class="tab-pane fade" id="order-terms" role="tabpanel" aria-labelledby="order-tab">
+                                                <div class="accordion" id="accordionOrderTerms">
+                                                    <!-- 预付费 -->
+                                                    <div class="accordion-item term-item">
+                                                        <h2 class="accordion-header" id="heading-order-prepaid">
+                                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-order-prepaid"  aria-controls="collapse-order-prepaid">
+                                                                预付费
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapse-order-prepaid" class="accordion-collapse" aria-labelledby="heading-order-prepaid" data-bs-parent="#accordionOrderTerms">
+                                                            <div class="accordion-body">
+                                                                <p><strong>定义：</strong>客人在使用包厢前预先支付的费用。</p>
+                                                                <p><strong>应用场景：</strong>开台时客人先支付一定金额作为消费押金，后续消费可抵扣该金额。预付费有助于控制客人消费额度，减少坏账风险。</p>
+                                                                <p><strong>相关术语：</strong>押金、开台立结</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <!-- 账单还原 -->
+                                                    <div class="accordion-item term-item">
+                                                        <h2 class="accordion-header" id="heading-order-bill-restore">
+                                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-order-bill-restore"  aria-controls="collapse-order-bill-restore">
+                                                                账单还原
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapse-order-bill-restore" class="accordion-collapse" aria-labelledby="heading-order-bill-restore" data-bs-parent="#accordionOrderTerms">
+                                                            <div class="accordion-body">
+                                                                <p><strong>定义：</strong>将已结账的账单恢复到未结状态的操作。</p>
+                                                                <p><strong>应用场景：</strong>当结账操作有误或客人需要继续消费时，管理员可将已结账的订单恢复为未结状态，允许继续添加消费项目。此操作通常需要较高权限。</p>
+                                                                <p><strong>相关术语：</strong>反结账、账单修改</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- 搜索脚本 -->
+                                        <script>
+                                        document.addEventListener('DOMContentLoaded', function() {
+                                            const searchInput = document.getElementById('termSearch');
+                                            if (searchInput) {
+                                                searchInput.addEventListener('keyup', function() {
+                                                    const searchText = this.value.toLowerCase();
+                                                    const termItems = document.querySelectorAll('.term-item');
+                                                    
+                                                    termItems.forEach(item => {
+                                                        const termName = item.querySelector('.accordion-button').textContent.toLowerCase();
+                                                        const termContent = item.querySelector('.accordion-body').textContent.toLowerCase();
+                                                        
+                                                        if (termName.includes(searchText) || termContent.includes(searchText)) {
+                                                            item.style.display = '';
+                                                        } else {
+                                                            item.style.display = 'none';
+                                                        }
+                                                    });
+                                                });
+                                            }
+                                        });
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- 后续可添加更多文档部分 -->
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 下载模态框 -->
+    <div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="downloadModalLabel">下载汇金Pro系统</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-desktop me-2"></i>收银系统</h5>
+                                    <p class="card-text mb-4">适用于前台收银电脑，支持开台、点单、结账等核心功能</p>
+                                    <div class="d-grid">
+                                        <button class="btn btn-primary mb-2" id="modalWindowsDownload">
+                                            Windows版本 v2.1.5
+                                            <small class="d-block">适用于Windows 10及以上版本</small>
+                                        </button>
+                                        <button class="btn btn-outline-primary" id="modalAndroidDownload">
+                                            安卓收银机版 v2.1.5
+                                            <small class="d-block">适用于收银一体机</small>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-tablet-alt me-2"></i>移动点单系统</h5>
+                                    <p class="card-text mb-4">适用于平板电脑，支持服务员现场接单和厨房管理</p>
+                                    <div class="d-grid">
+                                        <button class="btn btn-primary" id="modalMobileDownload">
+                                            安卓平板版 v2.1.5
+                                            <small class="d-block">适用于Android平板</small>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-progress-container mt-4 d-none">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                        </div>
+                        <div class="text-center mt-2">
+                            <small class="download-status">准备下载...</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                    <a href="#" class="btn btn-outline-primary">查看更多下载</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS 和 Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 自定义JS -->
+    <script src="js/main.js"></script>
+    <script>
+        // 确保在文档中心页面也能正常使用下载功能
+        document.addEventListener('DOMContentLoaded', function() {
+            // 检查下载按钮是否存在于当前页面
+            const downloadButtons = [
+                document.getElementById('modalWindowsDownload'),
+                document.getElementById('modalAndroidDownload'),
+                document.getElementById('modalMobileDownload')
+            ];
+            
+            // 为存在的按钮添加事件监听器
+            downloadButtons.forEach(button => {
+                if (button) {
+                    button.addEventListener('click', function() {
+                        let fileName = '';
+                        if (button.id === 'modalWindowsDownload') {
+                            fileName = '收银系统v2.1.5.exe';
+                        } else if (button.id === 'modalAndroidDownload') {
+                            fileName = '收银系统v2.1.5.apk';
+                        } else if (button.id === 'modalMobileDownload') {
+                            fileName = '移动点单系统v2.1.5.apk';
+                        }
+                        
+                        if (window.simulateDownload) {
+                            window.simulateDownload(fileName);
+                        } else {
+                            console.warn('模拟下载函数不存在，可能main.js尚未加载');
+                            // 基本的下载模拟
+                            const progressContainer = document.querySelector('.download-progress-container');
+                            const progressBar = document.querySelector('.progress-bar');
+                            const downloadStatus = document.querySelector('.download-status');
+                            
+                            if (progressContainer && progressBar && downloadStatus) {
+                                progressContainer.classList.remove('d-none');
+                                downloadStatus.textContent = `正在下载 ${fileName}...`;
+                                
+                                let progress = 0;
+                                const interval = setInterval(() => {
+                                    progress += 5;
+                                    progressBar.style.width = `${progress}%`;
+                                    progressBar.setAttribute('aria-valuenow', progress);
+                                    
+                                    if (progress >= 100) {
+                                        clearInterval(interval);
+                                        downloadStatus.textContent = `${fileName} 下载完成！`;
+                                        setTimeout(() => {
+                                            progressContainer.classList.add('d-none');
+                                            progressBar.style.width = '0%';
+                                            progressBar.setAttribute('aria-valuenow', 0);
+                                        }, 2000);
+                                    }
+                                }, 200);
+                            }
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

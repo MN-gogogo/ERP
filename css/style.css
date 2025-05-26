@@ -1,0 +1,439 @@
+/* 全局样式 */
+:root {
+    --primary-color: #2B7AE9;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+}
+
+body {
+    font-family: "思源黑体", "Microsoft YaHei", sans-serif;
+    color: #333;
+}
+
+/* 导航栏样式 */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    padding: 0.75rem 0;
+}
+
+.navbar-scrolled {
+    background-color: #fff !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.navbar-brand span {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+}
+
+.navbar-brand img {
+    transition: transform 0.3s;
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.05);
+}
+
+.navbar .nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.navbar .dropdown-menu {
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.navbar .dropdown-item {
+    padding: 0.5rem 1.5rem;
+    transition: background-color 0.3s;
+}
+
+.navbar .dropdown-item:hover {
+    background-color: rgba(43, 122, 233, 0.1);
+}
+
+@media (max-width: 992px) {
+    .navbar .navbar-collapse {
+        padding: 1rem 0;
+    }
+    
+    .navbar .dropdown-menu {
+        border: none;
+        background-color: rgba(0, 0, 0, 0.03);
+        padding: 0.5rem;
+    }
+    
+    .navbar .nav-link {
+        padding: 0.75rem 0;
+    }
+    
+    .navbar .d-flex {
+        margin-top: 0.5rem;
+    }
+}
+
+/* 主标题区域 */
+.hero-section {
+    background-color: #f8f9fa;
+    background-image: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.hero-section h1 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.hero-section .lead {
+    color: #666;
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.download-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 系统卡片 */
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+    overflow: hidden;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.systems-section .card-title {
+    color: var(--dark-color);
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.systems-section .card-text {
+    color: #666;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.systems-section .card .btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+}
+
+.systems-section .qrcode-container img {
+    max-width: 120px;
+    margin: 0 auto;
+}
+
+/* 快速开始步骤 */
+.quick-start-section {
+    padding: 4rem 0;
+    background-color: #fff;
+}
+
+.steps-container {
+    position: relative;
+    z-index: 1;
+}
+
+.steps-connector {
+    position: absolute;
+    top: 50px;
+    left: 25%;
+    right: 25%;
+    height: 4px;
+    background-color: #e9ecef;
+    z-index: -1;
+}
+
+.step-card {
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 1.5rem 1rem;
+    border-radius: 12px !important;
+}
+
+.step-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.step-icon {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(43, 122, 233, 0.1);
+    margin-bottom: 1.5rem;
+    transition: all 0.3s;
+}
+
+.step-card:hover .step-icon {
+    background-color: rgba(43, 122, 233, 0.2);
+}
+
+.step-number {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #0d6efd;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.step-title {
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+}
+
+.step-desc {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* 二维码 */
+.qrcode-container {
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.qrcode-container:hover {
+    transform: scale(1.05);
+}
+
+/* 响应式调整 */
+@media (max-width: 992px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+    .systems-section .card-title {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+    }
+    
+    .hero-section img {
+        margin-top: 2rem;
+    }
+    
+    .steps-connector {
+        display: none;
+    }
+    
+    .step-icon {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .step-card {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .systems-section .card-title {
+        font-size: 1rem;
+    }
+    .systems-section .card-text {
+        font-size: 0.85rem;
+    }
+}
+
+/* 下载模态框 */
+.modal-content {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.modal-header {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.modal-title {
+    font-weight: 600;
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.systems-section .card,
+.quick-start-section .card {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.systems-section .card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.systems-section .card:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.systems-section .card:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+/* 常见问题样式 */
+.faq-section {
+    background-color: #f8f9fa;
+}
+
+.accordion-item {
+    
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-button {
+    font-weight: 600;
+    color: var(--dark-color);
+    background-color: white;
+    padding: 1.25rem 1.5rem;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--primary-color);
+    background-color: rgba(43, 122, 233, 0.05);
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(43, 122, 233, 0.1);
+}
+
+.accordion-button::after {
+    transition: transform 0.3s;
+}
+
+.accordion-body {
+    padding: 1.5rem;
+    background-color: white;
+}
+
+.accordion-body p {
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.accordion-body ul,
+.accordion-body ol {
+    color: #555;
+    padding-left: 1.5rem;
+}
+
+.accordion-body li {
+    margin-bottom: 0.5rem;
+}
+
+.accordion-body a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.accordion-body a:hover {
+    text-decoration: underline;
+}
+
+/* 页脚样式 */
+footer {
+    background-color: #222;
+    color: #fff;
+}
+
+footer h5 {
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    color: #fff;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+footer .list-unstyled li a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer .list-unstyled li a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .text-white-50 {
+    transition: color 0.3s;
+}
+
+footer .text-white-50:hover {
+    color: #fff !important;
+}
+
+footer .social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+footer .social-icons a {
+    transition: transform 0.3s;
+}
+
+footer .social-icons a:hover {
+    transform: translateY(-3px);
+} 

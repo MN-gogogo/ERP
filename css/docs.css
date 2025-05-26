@@ -1,0 +1,206 @@
+/* 文档中心样式 */
+
+/* 侧边栏样式 */
+.docs-sidebar {
+    border-right: 1px solid #eee;
+    background-color: #f8f9fa;
+}
+
+.docs-sidebar .sticky-top {
+    top: 80px;
+    z-index: 1000;
+}
+
+.sidebar-heading {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #6c757d;
+    font-weight: 600;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.docs-sidebar .nav-link {
+    color: #495057;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.docs-sidebar .nav-link:hover {
+    color: #0d6efd;
+    background-color: transparent;
+}
+
+.docs-sidebar .nav-link.active {
+    color: #0d6efd;
+    font-weight: 500;
+    background-color: transparent;
+    border-left: 3px solid #0d6efd;
+    padding-left: 0.5rem;
+    margin-left: -0.5rem;
+}
+
+/* 文档内容区域样式 */
+.docs-content {
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+.docs-header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.docs-toc {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.25rem;
+}
+
+.docs-toc h6 {
+    margin-bottom: 0.5rem;
+    color: #6c757d;
+}
+
+.docs-toc ul {
+    padding-left: 1.5rem;
+    margin-bottom: 0;
+}
+
+.docs-toc ul li {
+    margin-bottom: 0.25rem;
+}
+
+.docs-toc a {
+    color: #495057;
+    text-decoration: none;
+}
+
+.docs-toc a:hover {
+    color: #0d6efd;
+    text-decoration: underline;
+}
+
+/* 文档搜索框 */
+.docs-search .input-group {
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+
+.docs-search .input-group-text {
+    background-color: #fff;
+    border-right: none;
+}
+
+.docs-search .form-control {
+    border-left: none;
+    box-shadow: none;
+}
+
+.docs-search .form-control:focus {
+    border-color: #ced4da;
+}
+
+/* 文档内容格式 */
+.docs-content h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.docs-content h3 {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.docs-content p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.docs-content code {
+    background-color: #f8f9fa;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    color: #e83e8c;
+}
+
+.docs-content pre {
+    background-color: #212529;
+    color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    overflow-x: auto;
+}
+
+/* 响应式调整 */
+@media (max-width: 992px) {
+    .docs-sidebar .sticky-top {
+        position: relative !important;
+        top: 0 !important;
+    }
+    
+    .docs-sidebar {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 2rem;
+    }
+}
+
+/* 文档页面图片 */
+.docs-content img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    margin: 1rem 0;
+}
+
+/* 文档页面表格 */
+.docs-content table {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-collapse: collapse;
+}
+
+.docs-content table th,
+.docs-content table td {
+    padding: 0.75rem;
+    border: 1px solid #dee2e6;
+}
+
+.docs-content table thead th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+}
+
+/* 文档提示框 */
+.docs-tip {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 4px solid;
+    border-radius: 0.25rem;
+}
+
+.docs-tip-info {
+    background-color: #e7f5ff;
+    border-color: #4dabf7;
+}
+
+.docs-tip-warning {
+    background-color: #fff3e0;
+    border-color: #ff9800;
+}
+
+.docs-tip-danger {
+    background-color: #ffe6e6;
+    border-color: #fa5252;
+}
+
+.docs-tip-success {
+    background-color: #ebfbee;
+    border-color: #51cf66;
+} 

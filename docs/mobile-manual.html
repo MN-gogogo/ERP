@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>移动点单系统使用说明书 - 汇金Pro</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- 自定义CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/docs.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/images/logo-placeholder.png" alt="汇金Pro Logo" width="40" height="40">
+                <span class="ms-2 d-none d-sm-inline">汇金Pro</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"  aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="productDropdown" role="button" data-bs-toggle="dropdown" >
+                            产品
+                        </a>
+                        <ul class="dropdown-menu shadow-sm" aria-labelledby="productDropdown">
+                            <li><a class="dropdown-item" href="#">掌柜系统</a></li>
+                            <li><a class="dropdown-item" href="#">收银系统</a></li>
+                            <li><a class="dropdown-item" href="#">财务报表系统</a></li>
+                            <li><a class="dropdown-item" href="#">移动点单系统（开发中）</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">客用小程序（开发中）</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#downloadModal">下载</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../docs.html">文档中心</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#faq-section">常见问题</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="#" class="btn btn-outline-primary d-none d-lg-block">联系我们</a>
+                    <a href="#" class="btn btn-primary d-lg-none w-100">联系我们</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 文档内容 -->
+    <div class="docs-container pt-5 mt-5">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- 侧边栏导航 -->
+                <div class="col-lg-3 col-md-4 docs-sidebar">
+                    <div class="sticky-top pt-3">
+                        <h5 class="sidebar-heading">移动点单系统使用说明书</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#basic-intro">
+                                    <i class="fas fa-info-circle me-2"></i>系统简介
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#login">
+                                    <i class="fas fa-sign-in-alt me-2"></i>系统登录
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#room-selection">
+                                    <i class="fas fa-door-open me-2"></i>选择包厢
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#product-order">
+                                    <i class="fas fa-shopping-cart me-2"></i>商品点单
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#cart-management">
+                                    <i class="fas fa-cart-plus me-2"></i>购物车管理
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#order-view">
+                                    <i class="fas fa-list-alt me-2"></i>查看订单
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#call-service">
+                                    <i class="fas fa-bell me-2"></i>呼叫功能
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <h5 class="sidebar-heading mt-4">其他文档</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="cashier-manual.html">
+                                    <i class="fas fa-cash-register me-2"></i>收银系统说明书
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="manager-manual.html">
+                                    <i class="fas fa-store me-2"></i>掌柜系统说明书
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../docs.html#finance-manual">
+                                    <i class="fas fa-chart-line me-2"></i>财务报表系统说明书
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <div class="mt-4 text-center">
+                            <a href="../docs.html" class="btn btn-outline-primary">
+                                <i class="fas fa-arrow-left me-2"></i>返回文档中心
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 文档内容区域 -->
+                <div class="col-lg-9 col-md-8 docs-content">
+                    <div class="p-4">
+                        <div class="docs-header mb-4">
+                            <h1>移动点单系统使用说明书</h1>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="../index.html">首页</a></li>
+                                    <li class="breadcrumb-item"><a href="../docs.html">文档中心</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">移动点单系统使用说明书</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        
+                        <!-- 系统简介 -->
+                        <section id="basic-intro" class="mb-5">
+                            <h2>系统简介</h2>
+                            <div class="card">
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        本说明书面向KTV服务员，介绍如何在Pad端使用移动点单系统，实现包厢现场的高效点单与服务操作。系统采用触摸屏操作，界面简洁直观，便于快速上手。
+                                    </p>
+                                    <p class="card-text mt-3">
+                                        移动点单系统是专为KTV包厢现场点单设计的应用程序，通过Pad等移动设备，服务员可以在包厢内直接完成点单、查看订单、响应呼叫等操作，无需在包厢和前台之间来回奔波，显著提高服务效率和客户体验。
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- 系统登录 -->
+                        <section id="login" class="mb-5">
+                            <h2>系统登录</h2>
+                            <div class="card">
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        <strong>功能说明：</strong>系统登录页用于验证服务员身份，保障数据安全。支持手机号+密码登录和微信扫码登录两种方式。
+                                    </p>
+                                    <p><strong>操作方法：</strong></p>
+                                    <ol>
+                                        <li>打开Pad上的移动点单系统，进入登录界面</li>
+                                        <li>输入手机号和密码，或选择"微信扫码登录"</li>
+                                        <li>可勾选"记住密码"以便下次快速登录</li>
+                                        <li>点击"登录"按钮，系统验证通过后进入主界面</li>
+                                        <li>登录界面右下角可查看门店编号、门店名称和当前设备IP地址，便于技术支持</li>
+                                    </ol>
+                                    
+                                    <div class="mt-3">
+                                        <div class="alert alert-light border">
+                                            <i class="fas fa-image me-2 text-muted"></i>系统登录页面截图展示（原型阶段暂不提供）
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- 选择包厢 -->
+                        <section id="room-selection" class="mb-5">
+                            <h2>选择包厢</h2>
+                            <div class="card">
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        <strong>操作步骤：</strong>
+                                    </p>
+                                    <ol>
+                                        <li>登录后进入"实时包厢页"</li>
+                                        <li>可通过顶部"全部/使用中"筛选按钮，仅显示正在使用中的包厢</li>
+                                        <li>支持包厢搜索和筛选，快速定位目标包厢</li>
+                                        <li>点击目标包厢卡片，进入该包厢的点单页面</li>
+                                    </ol>
+                                    
+                                    <div class="mt-3">
+                                        <div class="alert alert-light border">
+                                            <i class="fas fa-image me-2 text-muted"></i>实时包厢页面截图展示（原型阶段暂不提供）
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- 其他部分简化展示，提示完整版查看文档中心 -->
+                        <div class="alert alert-info">
+                            <h4 class="alert-heading">文档演示</h4>
+                            <p>这是一个演示页面，完整的移动点单系统使用说明书请在产品正式发布后查看。</p>
+                            <p>更多模块说明（商品点单、购物车管理、订单查看、呼叫功能等）将在完整版中提供。</p>
+                            <hr>
+                            <p class="mb-0">如有疑问，请联系我们的技术支持团队。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS 和 Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
